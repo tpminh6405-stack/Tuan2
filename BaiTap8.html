@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Layout - html4_to_html5.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Header Styling --- */
+        header {
+            background-color: #E6E6E6; /* Light gray background */
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .logo-section img {
+            width: 60px; /* Placeholder size for the logo */
+            height: 60px;
+            margin-right: 15px;
+            opacity: 0.8; /* To mimic the slightly washed-out look */
+        }
+
+        hgroup h1, hgroup h2 {
+            margin: 0;
+            line-height: 1.2;
+            color: #333;
+        }
+
+        hgroup h1 {
+            font-size: 1.4em;
+            color: #00008b; /* Dark blue/Navy for main text */
+        }
+
+        hgroup h2 {
+            font-size: 1em;
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        /* --- Navigation Styling --- */
+        nav {
+            background-color: #E6E6E6; /* Same gray background */
+            padding: 5px 0;
+            text-align: center;
+            border-top: 1px solid #ccc; /* Separator line */
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #3a5c9d; /* Blue links for menu items */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Main Content (Section) Styling --- */
+        section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* --- Article (Left Column) Styling --- */
+        article {
+            flex: 2; /* Takes up more space */
+            background-color: #E6E6E6; /* Light gray box background */
+            border: 1px solid #ccc;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        article h1 {
+            background-color: #FFFFFF;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+            margin: -15px -15px 15px -15px; /* Extend border to edges */
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* --- Aside (Right Column) Styling --- */
+        aside {
+            flex: 1; /* Takes up less space */
+            background-color: #E6E6E6; /* Light gray box background */
+            border: 1px solid #ccc;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        aside h1 {
+            background-color: #FFFFFF;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+            margin: -15px -15px 15px -15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Common Styling for links within article/aside */
+        article a, aside a {
+            color: #3a5c9d; /* Blue hyperlink color */
+            text-decoration: underline;
+            display: block; /* Make the link take its own line */
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+        
+        p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        /* --- Figure/Image Styling --- */
+        figure {
+            margin: 10px 0 0 0;
+            padding: 0;
+            border: 1px solid #ccc;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        figcaption {
+            padding: 10px;
+            font-size: 0.85em;
+            line-height: 1.4;
+            background-color: #fff; /* White background for text below image */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p><a href="#" style="color: blue; text-decoration: underline; font-size: 1.2em; font-weight: bold;">HTML5 Structure</a></p>
+
+        <header>
+            <div class="logo-section">
+                <img src="logo_placeholder.png" alt="Logo Khoa Công Nghệ Thông Tin Kinh Doanh" style="filter: grayscale(100%);">
+                <hgroup>
+                    <h1>KHOA CÔNG NGHỆ THÔNG TIN KINH DOANH</h1>
+                    <h2>School of Business Information Technology</h2>
+                </hgroup>
+            </div>
+        </header>
+
+        <nav>
+            <a href="#">Chương trình Đại học</a>
+            <a href="#">CT Liên thông Đại học</a>
+            <a href="#">Chương trình Sau đại học</a>
+            <a href="#">Chương trình quốc tế</a>
+        </nav>
+
+        <section>
+            
+            <article>
+                <h1>Chương trình Đại học</h1>
+                <a href="#">Hệ thống hoạch định nguồn lực doanh nghiệp (ERP)</a>
+                <p>
+                    Nhu cầu xã hội Hoạch định các nguồn lực một cách hiệu quả để nhắm đến mục tiêu giảm chi phí, tăng sức cạnh tranh là một vấn đề mà mọi doanh nghiệp luôn phải đối mặt, nhất là trong thời kỳ hội nhập hiện nay. Hệ thống hoạch định nguồn lực doanh nghiệp (ERP) [...]
+                </p>
+                <figure>
+                    <img src="article_image_placeholder.jpg" alt="Hình ảnh minh họa cho ERP" style="opacity: 0.5;">
+                </figure>
+            </article>
+
+            <aside>
+                <h1>Liên kết</h1>
+                <a href="#">Hệ thống thông tin kinh doanh</a>
+                
+                <figure>
+                    <img src="aside_image_placeholder.jpg" alt="Hình ảnh mạng lưới và điện thoại" style="filter: brightness(110%) opacity(0.8);">
+                    <figcaption>
+                        Nhu cầu xã hội Hiện nay, ứng dụng công nghệ trong điều hành doanh nghiệp đang được các nhà quản trị quan...
+                    </figcaption>
+                </figure>
+            </aside>
+
+        </section>
+        
+        <footer>
+            </footer>
+
+    </div>
+
+</body>
+</html>

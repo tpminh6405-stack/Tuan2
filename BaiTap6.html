@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Liên kết nội trang</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h2 {
+    color: #003366;
+  }
+
+  /* Tạo khoảng cách giữa các phần */
+  section {
+    margin-bottom: 60px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Đặt thẻ đánh dấu đầu trang -->
+<a id="top"></a>
+
+<!-- Thanh liên kết điều hướng -->
+<p>
+  <a href="#cau3">Câu 3</a> |
+  <a href="#cau4">Câu 4</a> |
+  <a href="#cau5">Câu 5</a> |
+  <a href="#top">Về đầu trang</a>
+</p>
+
+<hr>
+
+<!-- Phần Câu 3 -->
+<section id="cau3">
+  <h2>Câu 3: Danh sách chuyên ngành đào tạo</h2>
+  <ul>
+    <li>Đại học
+      <ul type="circle">
+        <li>Hệ thống thông tin quản lý</li>
+        <li>Thương mại điện tử</li>
+        <li>ERP</li>
+      </ul>
+    </li>
+    <li>Sau đại học
+      <ul type="circle">
+        <li>Thạc sỹ Công nghệ thiết kế thông tin & truyền thông</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<!-- Phần Câu 4 -->
+<section id="cau4">
+  <h2>Câu 4: Nội dung lấy từ trang https://bit.ueh.edu.vn/dao-tao</h2>
+  <p><i>TS Nguyễn Mạnh Tuấn – <a href="mailto:tuannm@ueh.edu.vn">tuannm@ueh.edu.vn</a></i></p>
+  <div>
+    <img src="https://bit.ueh.edu.vn/wp-content/uploads/2022/10/1-CNPM.jpg" width="300" alt="Công nghệ Phần mềm">
+    <p><b>Công nghệ Phần mềm:</b> Nhu cầu xã hội Cách mạng công nghiệp 4.0 giúp công nghệ thông tin và viễn thông xâm nhập mọi mặt đời sống kinh tế xã hội.</p>
+  </div>
+</section>
+
+<!-- Phần Câu 5 -->
+<section id="cau5">
+  <h2>Câu 5: Liên kết đến các chuyên ngành</h2>
+  <ul>
+    <li><a href="http://bit.ueh.edu.vn/cong-nghe-phan-mem/" target="_blank">CÔNG NGHỆ PHẦN MỀM</a></li>
+    <li><a href="http://bit.ueh.edu.vn/chuyen-nganh-thuong-mai-dien-tu/" target="_blank">THƯƠNG MẠI ĐIỆN TỬ</a></li>
+    <li><a href="http://bit.ueh.edu.vn/chuyen-nganh-he-thong-thong-tin-kinh-doanh/" target="_blank">HỆ THỐNG THÔNG TIN KINH DOANH</a></li>
+  </ul>
+</section>
+
+<!-- Liên kết quay về đầu trang -->
+<p><a href="#top">▲ Về đầu trang</a></p>
+
+</body>
+</html>

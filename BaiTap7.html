@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bảng Nghệ Thuật & Giải Trí</title>
+    <style>
+        /* CSS for the table styling */
+        .art-entertainment-table {
+            border-collapse: collapse; /* Merges the borders */
+            width: 50%; /* Adjust width as needed */
+            margin: 20px auto; /* Center the table */
+            border: 1px solid #ccc; /* Light border around the whole table */
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Styling for the header row */
+        .art-entertainment-table th {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: #f2f2f2; /* Light gray background for column headers */
+            font-weight: bold;
+        }
+
+        /* Styling for the title cell (Mạng nghệ thuật & giải trí) */
+        .art-entertainment-table .title-cell {
+            background-color: white; /* White background */
+            color: blue; /* Blue text color */
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        /* Styling for the data cells */
+        .art-entertainment-table td {
+            padding: 8px;
+            text-align: left; /* Adjust alignment as needed */
+            border: 1px solid #ccc;
+        }
+
+        /* Styling for alternating rows (optional, but good practice) */
+        .art-entertainment-table tr:nth-child(even) {
+            /* background-color: #f9f9f9; */ /* Uncomment for light stripe effect */
+        }
+    </style>
+</head>
+<body>
+
+    <table class="art-entertainment-table">
+        <tr>
+            <th colspan="2" class="title-cell">Mạng nghệ thuật & giải trí</th>
+        </tr>
+        
+        <tr>
+            <th>Phim</th>
+            <th>Ngày chiếu</th>
+        </tr>
+        
+        <tr>
+            <td>Sherlock Holmes</td>
+            <td>Thứ hai</td>
+        </tr>
+        
+        <tr>
+            <td>Lovejoy</td>
+            <td>Thứ hai</td>
+        </tr>
+    </table>
+
+</body>
+</html>

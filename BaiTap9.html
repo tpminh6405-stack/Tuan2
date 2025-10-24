@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HTML5 Quiz</title>
+<style>
+    /* Styling để thanh progress bar hiển thị (tùy chọn) */
+    .progress-container {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>Quiz</h1>
+<form method="post" action="" id="quiz">
+    <ol>
+        <li>
+            <label for="q1">What color do you get when you mix red and yellow?</label>
+            <input type="color" name="q1" id="q1" required placeholder="Choose a color">
+        </li>
+        <li>
+            <label for="q2">What is the first primary number greater than 20?</label>
+            <input type="number" name="q2" id="q2" required min="20" step="1" placeholder="Enter a number >= 20">
+        </li>
+        <li>
+            <label for="q3">Using exactly four 9s and no other digits, write an equation which evaluates to 100. You may use addition (+), subtraction (-), multiplication (*), and division (/). Do not include spaces.</label>
+            <input type="text" name="q3" id="q3" required placeholder="e.g., 99 + 9/9">
+        </li>
+        <li>
+            <label for="q4">What date was John F. Kennedy assassinated?</label>
+            <input type="date" name="q4" id="q4" required placeholder="Select a date">
+        </li>
+        <li>
+            <label for="q5">What is the world's most popular search engine?</label>
+            <input type="url" name="q5" id="q5" required placeholder="e.g., https://www.google.com">
+        </li>
+    </ol>
+    
+    <div class="progress-container">
+        <label for="valid-progress">Valid Answers Progress (Client-side Check)</label><br>
+        <progress id="valid-progress" max="5" value="0"></progress> 
+    </div>
+    
+    <div class="progress-container">
+        <label for="correct-progress">Correct Answers Progress (Server-side Check)</label><br>
+        <progress id="correct-progress" max="5" value="0"></progress>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    // Mã JavaScript đơn giản để cập nhật progress bar cho các câu trả lời hợp lệ (client-side validation)
+    const form = document.getElementById('quiz');
+    const inputs = form.querySelectorAll('input:not([type="submit"])');
+    const validProgress = document.getElementById('valid-progress');
+    const totalQuestions = inputs.length;
+
+    function updateProgress() {
+        let validCount = 0;
+        inputs.forEach(input => {
+            // Kiểm tra tính hợp lệ của input theo HTML5 rules (required, type, min, v.v.)
+            if (input.checkValidity()) {
+                validCount++;
+            }
+        });
+        validProgress.value = validCount;
+    }
+
+    // Cập nhật progress khi có bất kỳ thay đổi nào
+    form.addEventListener('input', updateProgress);
+    // Cập nhật lần đầu khi tải trang
+    updateProgress();
+</script>
+
+</body>
+</html>
